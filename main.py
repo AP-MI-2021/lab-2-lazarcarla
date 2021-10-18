@@ -51,6 +51,7 @@ def test_is_superprime():
     assert(is_superprime(237))==False
 
 def get_largest_prime_below(n):#problema 1
+    run=False
     '''
     gasim ultimul numar prim mia mic decat numarul n dat
     :param n:numarul de la care pornim sa cautam numarul prim dinaintea lui
@@ -91,3 +92,4 @@ def main():
             print(get_largest_prime_below(n))
         elif optiune=='4':
             shouldRun==False
+main()
