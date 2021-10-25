@@ -1,17 +1,16 @@
-def is_palindrome(n):#problema 5
+def is_palindrome(x):#problema 5
     '''
     determinam daca un numar este palindrom sau nu
     :param n: numarul pe care il verificam daca este palindrom sau nu
     :return: bool: True daca numarul este palindrom sau False in caz contrar
     '''
-
-    x=n
+    n=x
     r=0
-    while n:
+    while x:
         c=x%10
         r=r*10+c
         x=x//10
-    if x==r:
+    if n==r:
         return True
     else:
         return False
@@ -68,8 +67,8 @@ def test_get_largest_prime_below():
     assert(get_largest_prime_below(9))==7
 
 def main():
-    shouldRun==True
-    while shouldRun:
+    
+    while True:
         print('1.numarul dat este palindrom sau nu')
         print('2.numarul dat este superprim sau nu')
         print('3.ultimul numar prim mai mic decat numarul citit')
@@ -91,5 +90,7 @@ def main():
             n=int(input('dati numarul:'))
             print(get_largest_prime_below(n))
         elif optiune=='4':
-            shouldRun==False
+            break
+        else:
+            print("optiune gresita")
 main()
